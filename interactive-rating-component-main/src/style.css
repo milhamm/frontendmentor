@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+:root {
+  --primary: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsla(216, 12%, 54%, 0.2);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+  --dark-blue: hsl(208, 18%, 19%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--very-dark-blue);
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  font-family: "Overpass", sans-serif;
+  padding: 0 2.4rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.hide {
+  display: none !important;
+}
+
+.card {
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--dark-blue);
+  padding: 3.2em;
+  border-radius: 2.5em;
+}
+
+.card .star {
+  display: inline-block;
+  background-color: var(--medium-grey);
+  padding: 1.6em;
+  border-radius: 50%;
+  margin-bottom: 3.6em;
+}
+
+.card h1 {
+  font-weight: 700;
+  color: var(--white);
+  font-size: 2.56rem;
+  margin-bottom: 0.3125em;
+}
+
+.card p {
+  color: var(--light-grey);
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  margin-bottom: 2em;
+}
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  margin-bottom: 3.2em;
+}
+
+.rating .rating-item {
+  width: 100%;
+  height: 100%;
+  max-width: 50px;
+  max-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: var(--medium-grey);
+  font-size: 1.5rem;
+  color: var(--light-grey);
+  transition: background-color linear 0.1s;
+  aspect-ratio: 1 / 1;
+}
+
+.rating .rating-item.selected {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.rating .rating-item:hover:not(:is(.selected)) {
+  background-color: var(--light-grey);
+  color: var(--white);
+}
+
+.btn {
+  all: unset;
+  cursor: pointer;
+}
+
+.card .submit {
+  width: 100%;
+  text-align: center;
+  background-color: var(--primary);
+  padding-block: 1.06em;
+  border-radius: 9999px;
+  color: var(--white);
+  font-size: 1.5rem;
+  letter-spacing: 0.15em;
+  transition: background-color linear 0.2s;
+}
+
+.card .submit:active {
+  background-color: var(--white);
+  color: var(--primary);
+}
+
+.card .submit:disabled {
+  background-color: var(--medium-grey);
+  color: var(--light-grey);
+  cursor: not-allowed;
+  user-select: none;
+}
+
+/* Thank you CSS */
+
+.card.thankyou {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.card.thankyou .illustration {
+  margin-bottom: 3.2em;
+}
+
+.card.thankyou .badge {
+  padding: 0.533em 1.2em;
+  background-color: var(--medium-grey);
+  color: var(--primary);
+  border-radius: 999px;
+  font-size: 1.5rem;
+  margin-bottom: 3.2em;
+}
