@@ -2,4 +2,4 @@
 
 ## List of Challenges
 
-- [x] Interactive Rating Component [Challenge](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI) | [Code]()
+- [x] Interactive Rating Component [Challenge](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI) | [Code](https://github.com/milhamm/frontendmentor/tree/main/interactive-rating-component)
